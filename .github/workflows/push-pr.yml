@@ -1,0 +1,28 @@
+name: Trigger when pushed code
+
+on:
+    push:
+        branches: 
+            - main
+            - "feature/**"
+        paths:
+            - "src/**"
+            - "test/**"
+    pull_request:
+        branches: 
+            - main
+            - "feature/**"
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v7
+
+            - name: Run tests
+              run: npm test
+
+
+
