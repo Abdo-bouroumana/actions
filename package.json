@@ -1,0 +1,10 @@
+{
+  "name": "github-actions-demo",
+  "version": "1.0.0",
+  "description": "Simple project for testing GitHub Actions",
+  "main": "app.js",
+  "scripts": {
+    "test": "bash test/test.sh"
+  },
+  "dependencies": {}
+}
