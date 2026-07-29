@@ -14,7 +14,7 @@ jobs:
         run: echo "Hi $HOSTNAME"
         
       - name: checkout repository
-        run: actions/checkout@v7.0.1
+        uses: actions/checkout@v6
     
       - name: list repository files
         run: ls -aR
