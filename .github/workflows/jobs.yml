@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: job 1 runs
-      run: echo "hello"
+      run: echo ${{ github.job }} 
 
   job_2:
     runs-on: ubuntu-latest
