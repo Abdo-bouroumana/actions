@@ -1,18 +1,12 @@
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: "Choose environment"
-        required: true
-        default: "staging"
-        type: choice
-        options:
-          - staging
-          - production
+  repository_dispatch:
+    type: [incident_report]
 
 jobs:
-  deploy:
+  handle_incident:
     runs-on: ubuntu-latest
+
     steps:
-      - name: a manual workflow trigger
-        run: echo "this triggered workflow was manual in ${{ inputs.environment }}"
+      - name: Print incident
+        run: echo "Hello incident"
+
