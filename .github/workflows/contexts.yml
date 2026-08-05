@@ -11,7 +11,7 @@ jobs:
       - name: Display information
         run: |
           echo "something: ${{ github.event_name }}"
-          ehco "Ref: ${{ github.ref }}, SHA: ${{ github.sha }}"
+          echo "Ref: ${{ github.ref }}, SHA: ${{ github.sha }}"
           echo "Actor: ${{ github.actor }}"
 
       - name: Retrieve Variable
