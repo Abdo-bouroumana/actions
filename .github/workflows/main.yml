@@ -1,4 +1,5 @@
-name: First workflow  
+name: First workflow
+run-name: My main Workflow
 
 on:
   push:
