@@ -1,0 +1,20 @@
+name: Contexts tuto workflow
+run-name: Context workflow test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  echo-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display information
+        run: |
+          echo "something: ${{ github.event_name }}"
+          ehco "Ref: ${{ github.ref }}, SHA: ${{ github.sha }}"
+          echo "Actor: ${{ github.actor }}"
+
+      - name: Retrieve Variable
+        run: |
+          echo "Variable value: ${{ vars.MY_VAR }}"
+  
