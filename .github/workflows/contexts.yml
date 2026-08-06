@@ -21,7 +21,7 @@ jobs:
       - name: Display information
         run: |
           echo "something: ${{ github.event_name }}"
-          echo "Ref: ${{ github.ref }}, SHA: ${{ github.sha }}"
+          echo "Run attempt: ${{ github.run_attempt }}, SHA: ${{ github.sha }}"
           echo "Actor: ${{ github.actor }}"
 
       - name: Retrieve Variable
