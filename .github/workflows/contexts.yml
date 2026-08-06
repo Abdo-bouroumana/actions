@@ -1,8 +1,13 @@
 name: Contexts tuto workflow
-run-name: Context workflow test
+run-name: Context workflow test | DEBUG - ${{ inputs.debug }}
 
 on:
   workflow_dispatch:
+    inputs:
+      debug: 
+        type: boolean
+        default: false
+  
 
 jobs:
   echo-date:
