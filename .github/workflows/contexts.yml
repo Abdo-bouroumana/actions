@@ -8,10 +8,15 @@ on:
         type: boolean
         default: false
   
-
+env:
+  NUMBER_OF_ATTEMPT: "${{github.run_attempt}}"
+  MY_OVERWRITTEN_VAR: "workflow"
+  
 jobs:
   echo-date:
     runs-on: ubuntu-latest
+    env:
+      MY_OVERWRITTEN_VAR: "job"
     steps:
       - name: Display information
         run: |
@@ -22,4 +27,6 @@ jobs:
       - name: Retrieve Variable
         run: |
           echo "Variable value: ${{ vars.MY_VAR }}"
+          echo "Number of attempt: ${{ env.NUMBER_OF_ATTEMPT }}"
+          echo "Overwritten var: ${{ env.MY_OVERWRITTEN_VAR }}"
   
